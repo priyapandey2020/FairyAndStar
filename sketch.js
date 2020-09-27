@@ -25,7 +25,7 @@ function setup() {
 	fairy.addAnimation("fairyflying",fairyImg);  
 	fairy.scale =0.25;
 
-	star = createSprite(750,30);
+	star = createSprite(650,30);
 	star.addImage(starImg);
 	star.scale = 0.2;
 
@@ -33,7 +33,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	starBody = Bodies.circle(700 , 50 , 5 , {restitution:0.5, isStatic:true});
+	starBody = Bodies.circle(650 , 30 , 5 , {restitution:0.5, isStatic:true});
 	World.add(world, starBody);
 	
 	Engine.run(engine);
