@@ -9,25 +9,25 @@ const Body = Matter.Body;
 
 function preload()
 {
-	starImg = loadImage("images/starImage.png");
-	fairyImg = loadImage("images/fairy.png");
-	bgImg = loadImage("images/starryNight.jpg");
+	starImg = loadImage("images/star.png");
+	fairyImg = loadAnimation("images/fairyImage1.png","images/fairyImage2.png");
+	bgImg = loadImage("images/starNight.png");
 	fairyVoice = loadSound("sound/JoyMusic.mp3");
 
 }
 
 function setup() {
 	createCanvas(800, 750);
-	
+
 	fairyVoice.play();
 
-	fairy = createSprite(130, 550);
-	fairy.addImage(fairyImg);  
+	fairy = createSprite(130, 520);
+	fairy.addAnimation("fairyflying",fairyImg);  
 	fairy.scale =0.25;
 
-	star = createSprite(700,50);
+	star = createSprite(750,30);
 	star.addImage(starImg);
-	star.scale = 0.05;
+	star.scale = 0.2;
 
 
 	engine = Engine.create();
