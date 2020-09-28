@@ -60,7 +60,11 @@ function draw() {
 function keyPressed() {
 
 	if(keyCode === RIGHT_ARROW){
-       fairy.x = fairy.x + 20;
+           fairy.x = fairy.x + 20;
+	}
+	
+        if(keyCode === LEFT_ARROW){
+           fairy.x = fairy.x - 20;
 	}
 
 	if (keyCode === DOWN_ARROW) {
